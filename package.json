@@ -1,0 +1,19 @@
+{
+  "name": "com.rvm.landing-page",
+  "version": "1.0.0",
+  "description": "Basic Landing page ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajeshvelmani/basic-landing-page.git"
+  },
+  "author": "rajeshvelmani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajeshvelmani/basic-landing-page/issues"
+  },
+  "homepage": "https://github.com/rajeshvelmani/basic-landing-page#readme"
+}
