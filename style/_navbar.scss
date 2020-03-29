@@ -1,0 +1,94 @@
+$primary-bg-color: #222;
+$title-font-size: 2rem;
+$font-color: #ddd;
+
+.hambuger {
+  display: none;
+  transition: all 0.5s ease;
+}
+
+.nav-bar {
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  background-color: $primary-bg-color;
+  justify-content: space-around;
+  align-items: center;
+  color: $font-color;
+  text-transform: capitalize;
+  .nav-banner {
+    font-size: $title-font-size;
+    user-select: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  .nav-menu {
+    width: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+    height: auto;
+    right: 0;
+    .nav-menu-list {
+      text-decoration: none;
+      list-style: none;
+      padding: 10px 40px;
+      position: relative;
+      cursor: pointer;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-color: #333;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar {
+    .hambuger {
+      position: absolute;
+      right: 2vw;
+      display: block;
+      border-radius: 5px;
+
+      .line {
+        flex-direction: column;
+        width: 40px;
+        height: 3px;
+        margin: 8px;
+        background-color: $font-color;
+        border-radius: 2px;
+      }
+      &:hover {
+        background-color: #333;
+      }
+    }
+
+    .nav-banner {
+      position: absolute;
+      left: 2vw;
+    }
+    .nav-menu {
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+      z-index: -1;
+      &.active {
+        flex-direction: column;
+        justify-self: center;
+        align-items: center;
+        position: absolute;
+        background-color: $primary-bg-color;
+        top: 10vh;
+        left: 0;
+        width: 100vw;
+        opacity: 1;
+        z-index: 1;
+        .nav-menu-list {
+          width: 100vw;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

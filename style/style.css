@@ -1,0 +1,123 @@
+.hambuger {
+  display: none;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.nav-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10vh;
+  width: 100%;
+  position: absolute;
+  background-color: #222;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ddd;
+  text-transform: capitalize;
+}
+
+.nav-bar .nav-banner {
+  font-size: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.nav-bar .nav-menu {
+  width: 30vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  height: auto;
+  right: 0;
+}
+
+.nav-bar .nav-menu .nav-menu-list {
+  text-decoration: none;
+  list-style: none;
+  padding: 10px 40px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-bar .nav-menu .nav-menu-list:hover {
+  background-color: #333;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-bar .hambuger {
+    position: absolute;
+    right: 2vw;
+    display: block;
+    border-radius: 5px;
+  }
+  .nav-bar .hambuger .line {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 40px;
+    height: 3px;
+    margin: 8px;
+    background-color: #ddd;
+    border-radius: 2px;
+  }
+  .nav-bar .hambuger:hover {
+    background-color: #333;
+  }
+  .nav-bar .nav-banner {
+    position: absolute;
+    left: 2vw;
+  }
+  .nav-bar .nav-menu {
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-out;
+    transition: opacity 0.3s ease-out;
+    z-index: -1;
+  }
+  .nav-bar .nav-menu.active {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: absolute;
+    background-color: #222;
+    top: 10vh;
+    left: 0;
+    width: 100vw;
+    opacity: 1;
+    z-index: 1;
+  }
+  .nav-bar .nav-menu.active .nav-menu-list {
+    width: 100vw;
+    text-align: center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: sans-serif;
+}
+/*# sourceMappingURL=style.css.map */
