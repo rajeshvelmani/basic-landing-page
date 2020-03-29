@@ -2,6 +2,11 @@ $primary-bg-color: #222;
 $title-font-size: 2rem;
 $font-color: #ddd;
 
+a {
+  text-decoration: none;
+  color: $font-color;
+}
+
 .hambuger {
   display: none;
   transition: all 0.5s ease;
@@ -11,7 +16,7 @@ $font-color: #ddd;
   display: flex;
   height: 10vh;
   width: 100%;
-  position: absolute;
+  position: fixed;
   background-color: $primary-bg-color;
   justify-content: space-around;
   align-items: center;
@@ -44,7 +49,7 @@ $font-color: #ddd;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .nav-bar {
     .hambuger {
       position: absolute;
@@ -67,12 +72,14 @@ $font-color: #ddd;
 
     .nav-banner {
       position: absolute;
-      left: 2vw;
+      left: 3vw;
     }
     .nav-menu {
-      opacity: 0;
-      transition: opacity 0.3s ease-out;
-      z-index: -1;
+      top: -100%;
+      .nav-menu-list {
+        display: none;
+      }
+      transition: top 0.5s ease-in-out;
       &.active {
         flex-direction: column;
         justify-self: center;
@@ -82,9 +89,9 @@ $font-color: #ddd;
         top: 10vh;
         left: 0;
         width: 100vw;
-        opacity: 1;
-        z-index: 1;
+        z-index: -1;
         .nav-menu-list {
+          display: block;
           width: 100vw;
           text-align: center;
         }
