@@ -140,7 +140,6 @@ section {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: sans-serif;
-  -webkit-transition: scroll 0.5s ease-in-out;
-  transition: scroll 0.5s ease-in-out;
+  scroll-behavior: smooth;
 }
 /*# sourceMappingURL=style.css.map */
