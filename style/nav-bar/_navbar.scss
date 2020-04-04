@@ -1,6 +1,7 @@
 @import "./nav-theme";
 
 .nav-bar {
+    position: absolute;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -8,12 +9,12 @@
     height: 10vh;
     width: 100vw;
 
-    user-select: none;
-    text-transform: capitalize;
+    backdrop-filter: blur(1rem);
 
-    background-color: $nav-primary-bg-color;
+    user-select: none;
     box-shadow: $box-shadow-value;
 
+    z-index: 10000;
     &.fixed-top {
         position: fixed;
     }
@@ -47,6 +48,7 @@
     .nav-bar {
         justify-content: space-between;
         padding: 0 2rem;
+        background-color: $nav-primary-bg-color;
         .nav-menu-list {
             position: absolute;
             flex-direction: column;

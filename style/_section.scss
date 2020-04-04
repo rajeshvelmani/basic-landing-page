@@ -1,7 +1,20 @@
-section {
+@mixin section {
     min-height: 100vh;
     width: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 10vh 3rem;
+    background-color: #000;
+    .title {
+        text-align: center;
+        padding: 1rem;
+    }
+}
+
+@mixin background-img {
+    background-color: #222;
+
+    background-image: url("../img/pexels-photo-356147.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    // background-attachment: fixed;
+    background-blend-mode: overlay;
 }

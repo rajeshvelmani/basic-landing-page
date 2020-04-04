@@ -3,9 +3,19 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
     <title>Landing page</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,10 +27,10 @@
                     <a href="#home">home</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="#about">about us</a>
+                    <a href="#works">works</a>
                 </li>
                 <li class="nav-menu-item">
-                    <a href="#products">products</a>
+                    <a href="#products">qualification</a>
                 </li>
                 <li class="nav-menu-item">
                     <a href="#contact">contact</a>
@@ -35,19 +45,40 @@
     </header>
 
     <content>
-        <section id='home'>
-            <h1>home</h1>
+        <section class="hero-section" id='home'>
+            <h1 class="title">I'm Rajesh</h1>
+            <p class="sub-title">
+                Designer
+            </p>
+            <p class="objective">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque fuga possimus laboriosam numquam,
+                accusantium tempore! Aspernatur minus enim vero libero laborum omnis nam. Inventore quidem magni
+                mollitia quo pariatur atque!
+            </p>
         </section>
-        <section id='about'>
-            <h1>about</h1>
+        <section id='works' class="works">
+            <h1 class="title">works</h1>
+            <div class="grid">
+                <div class="card"></div>
+                <div class="card"></div>
+                <div class="card"></div>
+            </div>
         </section>
         <section id='products'>
-            <h1>products</h1>
+            <h1 class="title">qualification</h1>
         </section>
         <section id='contact'>
-            <h1>contact</h1>
+            <h1 class="title">contact</h1>
         </section>
     </content>
+
+    <footer>
+        <div class="social">
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+            <i class="fa fa-github" aria-hidden="true"></i>
+        </div>
+    </footer>
     <script src="./scripts/navbar.js"></script>
 </body>
 

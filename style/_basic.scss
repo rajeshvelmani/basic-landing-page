@@ -1,0 +1,40 @@
+$title-font-color: #ddd;
+$font-color: #ccc;
+$bg-color: #000;
+//active color
+$active-color: #1b4e9b;
+//font-family
+$font-family: "Source Sans Pro", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    // overflow: hidden;
+
+    font-family: $font-family;
+    font-weight: 400;
+    color: $font-color;
+
+    scroll-behavior: smooth;
+    text-transform: capitalize;
+    user-select: none;
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+}
+
+@mixin paragraph {
+    font-size: 2rem;
+    color: $font-color;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
