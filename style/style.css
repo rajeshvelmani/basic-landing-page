@@ -1,123 +1,138 @@
-.hambuger {
-  display: none;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-
 .nav-bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 10vh;
-  width: 100vw;
-  position: fixed;
-  background-color: #222;
   -ms-flex-pack: distribute;
       justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-transform: capitalize;
-  -webkit-box-shadow: 0px 4px 10px rgba(1, 1, 1, 0.5);
-          box-shadow: 0px 4px 10px rgba(1, 1, 1, 0.5);
-}
-
-.nav-bar .nav-banner {
-  font-size: 2rem;
+  height: 10vh;
+  width: 100vw;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  text-transform: capitalize;
+  background-color: #222;
+  -webkit-box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
+          box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
+}
+
+.nav-bar.fixed-top {
+  position: fixed;
+}
+
+.nav-bar .nav-banner {
+  font-size: 2rem;
   letter-spacing: 2px;
 }
 
-.nav-bar a {
-  text-decoration: none;
-  color: #ddd;
-  cursor: pointer;
-}
-
-.nav-bar .nav-menu {
+.nav-bar .nav-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
-.nav-bar .nav-menu .nav-menu-list {
-  list-style: none;
-  padding: 1.5vh 3vw;
-  cursor: pointer;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+.nav-bar .nav-menu-list .nav-menu-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 2rem;
 }
 
-.nav-bar .nav-menu .nav-menu-list:hover, .nav-bar .nav-menu .nav-menu-list.active {
-  background-color: #333;
+.nav-bar .nav-menu-list .nav-menu-item a,
+.nav-bar .nav-menu-list .nav-menu-item div {
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-bar .nav-menu-list .nav-menu-item:hover a,
+.nav-bar .nav-menu-list .nav-menu-item div {
+  color: #1b4e9b;
+}
+
+.nav-bar .toggle-btn {
+  display: none;
 }
 
 @media screen and (max-width: 900px) {
-  .nav-bar .hambuger {
-    position: absolute;
-    right: 2vw;
-    display: block;
-    border-radius: 5px;
+  .nav-bar {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 2rem;
   }
-  .nav-bar .hambuger .line {
+  .nav-bar .nav-menu-list {
+    position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    width: 40px;
-    height: 3px;
-    margin: 8px;
-    background-color: #ddd;
-    border-radius: 2px;
-  }
-  .nav-bar .hambuger:hover {
-    background-color: #333;
-  }
-  .nav-bar .nav-banner {
-    position: absolute;
-    left: 5vw;
-  }
-  .nav-bar .nav-menu {
     top: 10vh;
+    left: 0;
+    -webkit-box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
+            box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
     -webkit-transform-origin: top;
             transform-origin: top;
-    -webkit-transition: -webkit-transform 0.5s ease;
-    transition: -webkit-transform 0.5s ease;
-    transition: transform 0.5s ease;
-    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
-  .nav-bar .nav-menu .nav-menu-list {
-    display: none;
+  .nav-bar .nav-menu-list .nav-menu-item {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+    padding: 2rem 0;
+    background-color: #222;
   }
-  .nav-bar .nav-menu.active {
+  .nav-bar .nav-menu-list.active {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
+  }
+  .nav-bar .toggle-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -ms-grid-column-align: center;
-        justify-self: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    background-color: #222;
-    left: 0;
-    width: 100vw;
   }
-  .nav-bar .nav-menu.active .nav-menu-list {
-    display: block;
-    width: 100vw;
-    text-align: center;
+  .nav-bar .toggle-btn .line {
+    padding: 0.12rem 1.2rem;
+    margin: 0.3rem 0;
+    background-color: #ddd;
+    border-radius: 2px;
+    -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  }
+  .nav-bar .toggle-btn.active .line {
+    background-color: #1b4e9b;
+  }
+  .nav-bar .toggle-btn.active .line:first-child {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 0% 10%;
+            transform-origin: 0% 10%;
+  }
+  .nav-bar .toggle-btn.active .line:nth-child(2) {
+    opacity: 0;
+  }
+  .nav-bar .toggle-btn.active .line:last-child {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0% 90%;
+            transform-origin: 0% 90%;
   }
 }
 
@@ -140,7 +155,16 @@ section {
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   scroll-behavior: smooth;
+  color: #ddd;
+}
+
+* li {
+  list-style: none;
+}
+
+* a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

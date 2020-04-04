@@ -1,93 +1,107 @@
-$primary-bg-color: #222;
-$title-font-size: 2rem;
-$font-color: #ddd;
-.hambuger {
-    display: none;
-    transition: all 0.5s ease;
-}
+@import "./nav-theme";
 
 .nav-bar {
     display: flex;
-    height: 10vh;
-    width: 100vw;
-    position: fixed;
-    background-color: $primary-bg-color;
     justify-content: space-around;
     align-items: center;
+
+    height: 10vh;
+    width: 100vw;
+
+    user-select: none;
     text-transform: capitalize;
-    box-shadow: 0px 4px 10px rgba(1, 1, 1, 0.5);
+
+    background-color: $nav-primary-bg-color;
+    box-shadow: $box-shadow-value;
+
+    &.fixed-top {
+        position: fixed;
+    }
     .nav-banner {
         font-size: $title-font-size;
-        user-select: none;
         letter-spacing: 2px;
     }
-    a {
-        text-decoration: none;
-        color: $font-color;
-        cursor: pointer;
-    }
-    .nav-menu {
+    .nav-menu-list {
         display: flex;
-        justify-content: flex-end;
-        .nav-menu-list {
-            list-style: none;
-            padding: 1.5vh 3vw;
-            cursor: pointer;
-            transition: all 0.5s ease-in-out;
-            &:hover,
-            &.active {
-                background-color: #333;
+
+        .nav-menu-item {
+            display: flex;
+            padding: 0 2rem;
+            a,
+            div {
+                transition: color 0.3s ease-in-out;
+            }
+
+            &:hover a,
+            div {
+                color: #1b4e9b;
             }
         }
+    }
+    .toggle-btn {
+        display: none;
     }
 }
 
 @media screen and (max-width: 900px) {
     .nav-bar {
-        .hambuger {
+        justify-content: space-between;
+        padding: 0 2rem;
+        .nav-menu-list {
             position: absolute;
-            right: 2vw;
-            display: block;
-            border-radius: 5px;
+            flex-direction: column;
 
-            .line {
-                flex-direction: column;
-                width: 40px;
-                height: 3px;
-                margin: 8px;
-                background-color: $font-color;
-                border-radius: 2px;
-            }
-            &:hover {
-                background-color: #333;
-            }
-        }
-
-        .nav-banner {
-            position: absolute;
-            left: 5vw;
-        }
-        .nav-menu {
             top: 10vh;
+            left: 0;
+
+            box-shadow: $box-shadow-value;
+
             transform: scaleY(0);
             transform-origin: top;
-            transition: transform 0.5s ease;
-            .nav-menu-list {
-                display: none;
+            transition: transform 0.3s ease-in-out;
+
+            .nav-menu-item {
+                justify-content: center;
+                align-items: center;
+                width: 100vw;
+
+                padding: 2rem 0;
+
+                background-color: $nav-primary-bg-color;
             }
             &.active {
                 transform: scaleY(1);
-                flex-direction: column;
-                justify-self: center;
-                align-items: center;
-                position: absolute;
-                background-color: $primary-bg-color;
-                left: 0;
-                width: 100vw;
-                .nav-menu-list {
-                    display: block;
-                    width: 100vw;
-                    text-align: center;
+            }
+        }
+        //Toggle button animation
+        .toggle-btn {
+            display: flex;
+            flex-direction: column;
+
+            .line {
+                padding: 0.12rem 1.2rem;
+                margin: 0.3rem 0;
+                background-color: $primary-font-color;
+                border-radius: 2px;
+
+                transition: transform 0.3s ease-in-out,
+                    background-color 0.3s ease-in-out;
+            }
+
+            &.active {
+                .line {
+                    background-color: $active-color;
+                }
+                .line:first-child {
+                    transform: rotate(45deg);
+                    transform-origin: 0% 10%;
+                }
+                .line:nth-child(2) {
+                    opacity: 0;
+                }
+                .line:last-child {
+                    transform: rotate(-45deg);
+                    transform-origin: 0% 90%;
                 }
             }
         }

@@ -1,6 +1,9 @@
-var hambuger = document.querySelector(".hambuger");
-var navmenu = document.querySelector(".nav-menu");
+var toggleBtn = document.querySelector(".toggle-btn");
+var navmenu = document.querySelector(".nav-menu-list");
 
-hambuger.addEventListener("click", function() {
+toggleBtn.addEventListener("click", toggleFunction);
+
+function toggleFunction() {
     navmenu.classList.toggle("active");
-});
+    toggleBtn.classList.toggle("active");
+}
