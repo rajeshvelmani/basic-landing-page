@@ -15,7 +15,8 @@ section {
         flex-direction: column;
 
         .title {
-            font-size: 10rem;
+            font-size: 8rem;
+            letter-spacing: 2px;
         }
         .sub-title {
             @include paragraph;
@@ -33,6 +34,9 @@ section {
     &.works {
         .grid {
             @include grid-layout;
+            .card {
+                margin: 1rem 2rem;
+            }
         }
     }
 }
@@ -68,6 +72,17 @@ footer {
 
             .sub-title {
                 font-size: 1rem;
+            }
+
+            .objective {
+                font-weight: 200;
+            }
+        }
+        &.works {
+            .grid {
+                .card {
+                    margin: 1rem 0.1rem;
+                }
             }
         }
     }
