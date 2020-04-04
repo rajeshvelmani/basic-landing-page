@@ -1,0 +1,23 @@
+@import "./theme";
+
+$colors: (
+    "dark": (
+        "primary": rgb(255, 255, 255),
+        "secondary": rgba(255, 255, 255, 0.7),
+        "disabled": rgba(255, 255, 255, 0.5),
+        "hover": rgba(10, 33, 165, 0.884),
+        "background": rgba(0, 0, 0, 0.98),
+    ),
+    "light": (
+        "primary": rgba(0, 0, 0, 0.87),
+        "secondary": rgba(0, 0, 0, 0.54),
+        "disabled": rgba(0, 0, 0, 0.38),
+        "hover": rgba(10, 33, 165, 0.884),
+        "background": rgba(120, 189, 180, 0.63),
+    ),
+);
+
+@function colors($type: "primary", $mode: $theme-var) {
+    $map: map-get($colors, $mode);
+    @return map-get($map, $type);
+}

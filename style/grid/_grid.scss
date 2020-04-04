@@ -5,7 +5,7 @@
     .card {
         height: 60vh;
         width: 300px;
-        border: solid $active-color 1px;
+        border: solid colors("hover") 1px;
         border-radius: 5px;
     }
 }

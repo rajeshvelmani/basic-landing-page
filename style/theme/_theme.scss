@@ -1,0 +1,15 @@
+$theme-var: "dark";
+
+// @mixin set-theme-variable($theme) {
+//     $theme-var: "dark" !global;
+// }
+
+// @media (prefers-color-scheme: dark) {
+//     @if $theme-var == "" {
+//         $theme-var: "dark" !global;
+//     }
+// }
+
+// // @media (prefers-color-scheme: light) {
+// //     @include set-theme-variable("light");
+// // }

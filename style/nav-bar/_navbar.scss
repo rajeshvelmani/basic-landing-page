@@ -35,7 +35,7 @@
 
             &:hover a,
             div {
-                color: #1b4e9b;
+                color: colors("hover");
             }
         }
     }
@@ -48,7 +48,8 @@
     .nav-bar {
         justify-content: space-between;
         padding: 0 2rem;
-        background-color: $nav-primary-bg-color;
+        background-color: colors("background");
+        box-shadow: none;
         .nav-menu-list {
             position: absolute;
             flex-direction: column;
@@ -69,7 +70,7 @@
 
                 padding: 2rem 0;
 
-                background-color: $nav-primary-bg-color;
+                background-color: colors("background");
             }
             &.active {
                 transform: scaleY(1);
@@ -83,7 +84,7 @@
             .line {
                 padding: 0.12rem 1.2rem;
                 margin: 0.3rem 0;
-                background-color: $primary-font-color;
+                background-color: colors();
                 border-radius: 2px;
 
                 transition: transform 0.3s ease-in-out,
@@ -92,7 +93,7 @@
 
             &.active {
                 .line {
-                    background-color: $active-color;
+                    background-color: colors("hover");
                 }
                 .line:first-child {
                     transform: rotate(45deg);
