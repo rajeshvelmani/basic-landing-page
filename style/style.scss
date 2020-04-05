@@ -42,7 +42,12 @@ section {
             .card {
                 margin: 1rem 2rem;
                 box-shadow: 0 0 2px colors("hover");
-                background-color: darken(colors("background"), 5%);
+
+                @if $theme-var == "dark" {
+                    background-color: lighten(colors("background"), 5%);
+                } @else {
+                    background-color: darken(colors("background"), 5%);
+                }
                 text-align: center;
 
                 transition: all 0.3s ease-in-out;
@@ -69,7 +74,7 @@ section {
                         color: colors("secondary");
                         padding-top: 1rem;
                         font-size: 0.8rem;
-                        font-weight: 100;
+                        font-weight: 200;
                     }
                 }
 
@@ -107,8 +112,8 @@ footer {
 
     .company-details {
         background-color: colors("background");
-
-        padding: 1rem 0;
+        font-size: 0.8rem;
+        padding: 2rem 0;
         color: colors("secondary");
     }
 }
