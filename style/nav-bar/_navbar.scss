@@ -33,9 +33,12 @@
                 transition: color 0.3s ease-in-out;
             }
 
-            &:hover a,
-            div {
-                color: colors("hover");
+            &:hover,
+            &:focus {
+                a,
+                div {
+                    color: colors("hover");
+                }
             }
         }
     }

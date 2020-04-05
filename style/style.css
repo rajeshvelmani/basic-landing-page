@@ -74,7 +74,8 @@
 }
 
 .nav-bar .nav-menu-list .nav-menu-item:hover a,
-.nav-bar .nav-menu-list .nav-menu-item div {
+.nav-bar .nav-menu-list .nav-menu-item:hover div, .nav-bar .nav-menu-list .nav-menu-item:focus a,
+.nav-bar .nav-menu-list .nav-menu-item:focus div {
   color: #1b95df;
 }
 
@@ -587,6 +588,8 @@ section.works .grid .card {
           box-shadow: 0 0 2px #1b95df;
   background-color: #010102;
   text-align: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 section.works .grid .card img {
@@ -619,6 +622,8 @@ section.works .grid .card .card-container .card-footer {
 section.works .grid .card:hover {
   -webkit-box-shadow: 0 0 10px #1b95df;
           box-shadow: 0 0 10px #1b95df;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 footer {

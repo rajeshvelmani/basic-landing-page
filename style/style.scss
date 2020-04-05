@@ -44,6 +44,9 @@ section {
                 box-shadow: 0 0 2px colors("hover");
                 background-color: darken(colors("background"), 5%);
                 text-align: center;
+
+                transition: all 0.3s ease-in-out;
+
                 img {
                     max-width: 100%;
                     opacity: 0;
@@ -72,6 +75,7 @@ section {
 
                 &:hover {
                     box-shadow: 0 0 10px colors("hover");
+                    transform: scale(1.05);
                 }
             }
         }
