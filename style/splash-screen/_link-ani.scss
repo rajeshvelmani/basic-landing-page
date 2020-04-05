@@ -1,0 +1,23 @@
+a,
+.link {
+    &::after {
+        content: " ";
+        display: block;
+
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+
+        background-color: colors("hover");
+
+        transform: scale(0.2);
+        transform-origin: right;
+        transition: transform 250ms ease-in;
+    }
+
+    &:hover::after {
+        transform: scale(1);
+        transform-origin: left;
+    }
+}

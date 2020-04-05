@@ -13,7 +13,7 @@ body {
         background-color: colors("background");
 
         opacity: 1;
-        transition: all 3s ease-in-out;
+        transition: all 1s ease-in-out;
         transition-delay: 0.2s;
 
         .splash-ani {
@@ -27,7 +27,7 @@ body {
                 border-radius: 50%;
                 background-color: colors("hover");
                 animation: aniobj 1s infinite;
-
+                animation-timing-function: ease-in-out;
                 &:nth-child(2) {
                     animation-delay: 0.1s;
                 }
@@ -56,6 +56,10 @@ body {
         .splash-screen {
             height: 0vh;
             opacity: 0;
+
+            .splash-title {
+                display: none;
+            }
         }
     }
 }

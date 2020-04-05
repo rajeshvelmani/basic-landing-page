@@ -8,7 +8,7 @@
 
 @import "./grid/grid";
 
-@import "./splash-screen/splash-screen";
+@import "./splash-screen/animation";
 
 section {
     @include section;
@@ -46,6 +46,7 @@ section {
                 img {
                     max-width: 100%;
                     opacity: 0;
+                    border-radius: 5px 5px 0 0;
                     animation: ImageFadeIn 0.8s 1.4s forwards;
                 }
 
@@ -150,7 +151,7 @@ footer {
             }
 
             .objective {
-                font-size: 0.8rem;
+                font-size: 0.95rem;
                 font-weight: 200;
             }
         }
