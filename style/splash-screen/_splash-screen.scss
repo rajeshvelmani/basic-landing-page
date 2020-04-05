@@ -1,0 +1,61 @@
+body {
+    .splash-screen {
+        @include flex-center;
+
+        flex-direction: column;
+
+        position: absolute;
+
+        width: 100vw;
+        height: 100vh;
+
+        z-index: 1000000;
+        background-color: colors("background");
+
+        opacity: 1;
+        transition: all 3s ease-in-out;
+        transition-delay: 0.2s;
+
+        .splash-ani {
+            @include flex-center;
+            margin: 1rem 0;
+
+            .ani-obj {
+                margin: 0 0.8rem;
+                width: 1.5rem;
+                height: 1.5rem;
+                border-radius: 50%;
+                background-color: colors("hover");
+                animation: aniobj 1s infinite;
+
+                &:nth-child(2) {
+                    animation-delay: 0.1s;
+                }
+                &:nth-child(3) {
+                    animation-delay: 0.2s;
+                }
+            }
+
+            @keyframes aniobj {
+                0% {
+                    transform: translateY(-1rem);
+                }
+                100% {
+                    transform: translateY(1rem);
+                }
+            }
+        }
+
+        .splash-title {
+            padding-top: 2rem;
+            color: colors("secondary");
+        }
+    }
+
+    &.page-loads {
+        .splash-screen {
+            height: 0vh;
+            opacity: 0;
+        }
+    }
+}
