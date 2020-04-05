@@ -5,7 +5,7 @@
           box-sizing: border-box;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 400;
-  color: white;
+  color: #3c4859;
   scroll-behavior: smooth;
   text-transform: capitalize;
   -webkit-user-select: none;
@@ -40,8 +40,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
-          box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
+  -webkit-box-shadow: 0 1px 3px -2px rgba(1, 1, 1, 0.4);
+          box-shadow: 0 1px 3px -2px rgba(1, 1, 1, 0.4);
   z-index: 10000;
 }
 
@@ -75,7 +75,7 @@
 
 .nav-bar .nav-menu-list .nav-menu-item:hover a,
 .nav-bar .nav-menu-list .nav-menu-item div {
-  color: rgba(10, 33, 165, 0.884);
+  color: #0eabf2;
 }
 
 .nav-bar .toggle-btn {
@@ -88,9 +88,7 @@
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 2rem;
-    background-color: rgba(0, 0, 0, 0.98);
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    background-color: white;
   }
   .nav-bar .nav-menu-list {
     position: absolute;
@@ -100,8 +98,8 @@
             flex-direction: column;
     top: 10vh;
     left: 0;
-    -webkit-box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
-            box-shadow: 0px 2px 6px rgba(1, 1, 1, 0.4);
+    -webkit-box-shadow: 0 1px 3px -2px rgba(1, 1, 1, 0.4);
+            box-shadow: 0 1px 3px -2px rgba(1, 1, 1, 0.4);
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
     -webkit-transform-origin: top;
@@ -120,7 +118,7 @@
             align-items: center;
     width: 100vw;
     padding: 2rem 0;
-    background-color: rgba(0, 0, 0, 0.98);
+    background-color: white;
   }
   .nav-bar .nav-menu-list.active {
     -webkit-transform: scaleY(1);
@@ -138,7 +136,7 @@
   .nav-bar .toggle-btn .line {
     padding: 0.12rem 1.2rem;
     margin: 0.3rem 0;
-    background-color: white;
+    background-color: #3c4859;
     border-radius: 2px;
     -webkit-transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
     transition: background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
@@ -146,7 +144,7 @@
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   }
   .nav-bar .toggle-btn.active .line {
-    background-color: rgba(10, 33, 165, 0.884);
+    background-color: #0eabf2;
   }
   .nav-bar .toggle-btn.active .line:first-child {
     -webkit-transform: rotate(45deg);
@@ -169,7 +167,7 @@ section {
   min-height: 100vh;
   width: auto;
   padding: 10vh 3rem;
-  background-color: rgba(0, 0, 0, 0.98);
+  background-color: white;
 }
 
 section .title {
@@ -199,12 +197,14 @@ section.hero-section .title {
 }
 
 section.hero-section .sub-title {
-  font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.2rem;
+  color: #9fabbc;
   font-style: italic;
 }
 
 section.hero-section .objective {
+  font-size: 1.2rem;
+  color: #9fabbc;
   font-weight: 300;
   text-align: center;
   max-width: 700px;
@@ -223,23 +223,133 @@ section.works .grid {
           justify-content: center;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  -webkit-box-flex: 300px;
-      -ms-flex: 300px;
-          flex: 300px;
+  -webkit-box-flex: 302px;
+      -ms-flex: 302px;
+          flex: 302px;
 }
 
 section.works .grid .card {
-  height: 60vh;
-  width: 300px;
-  border: solid rgba(10, 33, 165, 0.884) 1px;
+  height: 450px;
+  width: 302px;
+  border: solid #0eabf2 1px;
   border-radius: 5px;
 }
 
 section.works .grid .card {
   margin: 1rem 2rem;
+  text-align: center;
+}
+
+section.works .grid .card img {
+  max-width: 100%;
+  opacity: 0;
+  -webkit-animation: ImageFadeIn 0.8s 1.4s forwards;
+          animation: ImageFadeIn 0.8s 1.4s forwards;
+}
+
+section.works .grid .card .card-container {
+  opacity: 0;
+  -webkit-animation: ContentFadeIn 0.8s 1.6s forwards;
+          animation: ContentFadeIn 0.8s 1.6s forwards;
+}
+
+section.works .grid .card .card-container .card-title {
+  padding-top: 1rem;
+  color: #3c4859;
+}
+
+section.works .grid .card .card-container .card-content {
+  color: #9fabbc;
+  padding: 1rem 1rem 0 1rem;
+}
+
+section.works .grid .card .card-container .card-footer {
+  color: #9fabbc;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+}
+
+section.works .grid .card:hover {
+  -webkit-box-shadow: 0 0 10px #0eabf2;
+          box-shadow: 0 0 10px #0eabf2;
+}
+
+@-webkit-keyframes ContentFadeIn {
+  0% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ContentFadeIn {
+  0% {
+    -webkit-transform: translateY(-1rem);
+            transform: translateY(-1rem);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes ImageFadeIn {
+  0% {
+    -webkit-transform: translateY(1rem) scale(1.05);
+            transform: translateY(1rem) scale(1.05);
+    opacity: 0;
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
+  }
+  50% {
+    opacity: 1;
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+
+@keyframes ImageFadeIn {
+  0% {
+    -webkit-transform: translateY(1rem) scale(1.05);
+            transform: translateY(1rem) scale(1.05);
+    opacity: 0;
+    -webkit-filter: blur(1rem);
+            filter: blur(1rem);
+  }
+  50% {
+    opacity: 1;
+    -webkit-filter: blur(0.5rem);
+            filter: blur(0.5rem);
+  }
+  100% {
+    -webkit-transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1);
+    opacity: 1;
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
 }
 
 footer {
+  text-align: center;
+}
+
+footer .social {
   top: 40vh;
   position: fixed;
   right: 2rem;
@@ -261,7 +371,7 @@ footer .social i {
           flex-direction: column;
   margin: 1rem;
   font-size: 2rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: #9fabbc;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -269,7 +379,13 @@ footer .social i {
 footer .social i:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-  color: rgba(10, 33, 165, 0.884);
+  color: #0eabf2;
+}
+
+footer .company-details {
+  background-color: white;
+  padding: 1rem 0;
+  color: #9fabbc;
 }
 
 @media screen and (max-width: 900px) {
@@ -283,18 +399,20 @@ footer .social i:hover {
     font-size: 1rem;
   }
   section.hero-section .objective {
+    font-size: 0.8rem;
     font-weight: 200;
   }
   section.works .grid .card {
     margin: 1rem 0.1rem;
   }
   footer {
+    background-color: white;
+  }
+  footer .social {
     position: relative;
     top: 0;
     right: 0;
     padding: 1rem;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.98);
   }
   footer .social i {
     display: inline;

@@ -26,6 +26,7 @@ section {
         }
 
         .objective {
+            @include paragraph;
             font-weight: 300;
             text-align: center;
             max-width: 700px;
@@ -38,27 +39,98 @@ section {
             @include grid-layout;
             .card {
                 margin: 1rem 2rem;
+
+                text-align: center;
+                img {
+                    max-width: 100%;
+                    opacity: 0;
+                    animation: ImageFadeIn 0.8s 1.4s forwards;
+                }
+
+                .card-container {
+                    opacity: 0;
+                    animation: ContentFadeIn 0.8s 1.6s forwards;
+
+                    .card-title {
+                        padding-top: 1rem;
+                        color: colors();
+                    }
+
+                    .card-content {
+                        color: colors("secondary");
+                        padding: 1rem 1rem 0 1rem;
+                    }
+                    .card-footer {
+                        color: colors("secondary");
+                        padding-top: 1rem;
+                        font-size: 0.8rem;
+                        font-weight: 100;
+                    }
+                }
+
+                &:hover {
+                    box-shadow: 0 0 10px colors("hover");
+                }
+            }
+
+            @keyframes ContentFadeIn {
+                0% {
+                    transform: translateY(-1rem);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes ImageFadeIn {
+                0% {
+                    transform: translateY(1rem) scale(1.05);
+                    opacity: 0;
+                    filter: blur(1rem);
+                }
+                50% {
+                    opacity: 1;
+                    filter: blur(0.5rem);
+                }
+                100% {
+                    transform: translateY(0) scale(1);
+                    opacity: 1;
+                    filter: blur(0);
+                }
             }
         }
     }
 }
 
 footer {
-    top: 40vh;
-    position: fixed;
-    right: 2rem;
-    .social i {
-        @include flex-center;
+    text-align: center;
 
-        flex-direction: column;
-        margin: 1rem;
-        font-size: 2rem;
-        color: colors("secondary");
-        transition: all 0.3s ease-in-out;
+    .social {
+        top: 40vh;
+        position: fixed;
+        right: 2rem;
+        i {
+            @include flex-center;
+
+            flex-direction: column;
+            margin: 1rem;
+            font-size: 2rem;
+            color: colors("secondary");
+            transition: all 0.3s ease-in-out;
+        }
     }
     .social i:hover {
         transform: scale(1.3);
         color: colors("hover");
+    }
+
+    .company-details {
+        background-color: colors("background");
+
+        padding: 1rem 0;
+        color: colors("secondary");
     }
 }
 
@@ -76,6 +148,7 @@ footer {
             }
 
             .objective {
+                font-size: 0.8rem;
                 font-weight: 200;
             }
         }
@@ -89,14 +162,17 @@ footer {
     }
 
     footer {
-        position: relative;
-        top: 0;
-        right: 0;
-        padding: 1rem;
-        text-align: center;
         background-color: colors("background");
-        .social i {
-            display: inline;
+
+        .social {
+            position: relative;
+            top: 0;
+            right: 0;
+            padding: 1rem;
+
+            i {
+                display: inline;
+            }
         }
     }
 }

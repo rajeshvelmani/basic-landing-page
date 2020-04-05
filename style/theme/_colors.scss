@@ -3,17 +3,17 @@
 $colors: (
     "dark": (
         "primary": rgb(255, 255, 255),
-        "secondary": rgba(255, 255, 255, 0.7),
-        "disabled": rgba(255, 255, 255, 0.5),
-        "hover": rgba(10, 33, 165, 0.884),
-        "background": rgba(0, 0, 0, 0.98),
+        "secondary": rgb(136, 152, 166),
+        "disabled": #f13030,
+        "hover": rgb(27, 149, 223),
+        "background": rgb(21, 32, 43),
     ),
     "light": (
-        "primary": rgba(0, 0, 0, 0.87),
-        "secondary": rgba(0, 0, 0, 0.54),
+        "primary": rgb(60, 72, 89),
+        "secondary": rgb(159, 171, 188),
         "disabled": rgba(0, 0, 0, 0.38),
-        "hover": rgba(10, 33, 165, 0.884),
-        "background": rgba(120, 189, 180, 0.63),
+        "hover": rgb(14, 171, 242),
+        "background": rgb(255, 255, 255),
     ),
 );
 
