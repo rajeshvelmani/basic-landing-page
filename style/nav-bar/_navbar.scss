@@ -31,12 +31,8 @@
             a,
             div {
                 transition: color 0.3s ease-in-out;
-            }
-
-            &:hover,
-            &:focus {
-                a,
-                div {
+                &:hover,
+                &:focus {
                     color: colors("hover");
                 }
             }
