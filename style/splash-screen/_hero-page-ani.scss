@@ -1,0 +1,31 @@
+@keyframes slide-top {
+    0% {
+        transform: TranslateY(200%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: TranslateY(0);
+        opacity: 1;
+    }
+}
+
+$hero-title-duration: 1s;
+
+$hero-sub-title-duration: 1s;
+
+$hero-objective-duration: 1s;
+
+.hero-section {
+    .title {
+        animation: slide-top $hero-title-duration ease-in-out;
+    }
+
+    .sub-title {
+        animation: slide-top $hero-sub-title-duration ease-in-out;
+    }
+
+    .objective {
+        animation: slide-top $hero-objective-duration ease-in-out;
+    }
+}

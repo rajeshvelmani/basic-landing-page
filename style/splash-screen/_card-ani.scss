@@ -1,0 +1,59 @@
+.works {
+    .card {
+        animation: cards-ani 1s ease-in;
+
+        img {
+            animation: ImageFadeIn 0.8s 1.2s forwards;
+        }
+
+        .card-container {
+            animation: ContentFadeIn 0.8s 1.2s forwards;
+        }
+    }
+}
+
+@keyframes cards-ani {
+    0% {
+        transform: TranslateY(50%) Scale(0.75);
+        opacity: 0.25;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    75% {
+        transform: TranslateY(0) Scale(1.1);
+        opacity: 0.57;
+    }
+    100% {
+        transform: Scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes ContentFadeIn {
+    0% {
+        transform: translateY(-1rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes ImageFadeIn {
+    0% {
+        transform: translateY(1rem) scale(1.05);
+        opacity: 0;
+        filter: blur(1rem);
+    }
+    50% {
+        opacity: 1;
+        filter: blur(0.5rem);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+        filter: blur(0);
+    }
+}
