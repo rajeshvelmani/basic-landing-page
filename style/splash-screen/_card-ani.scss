@@ -1,14 +1,12 @@
-.works {
-    .card {
-        animation: cards-ani 1s ease-in;
+.card.observed {
+    animation: cards-ani 1s ease-in;
 
-        img {
-            animation: ImageFadeIn 0.8s 1.2s forwards;
-        }
+    img {
+        animation: ImageFadeIn 0.8s 1.2s forwards;
+    }
 
-        .card-container {
-            animation: ContentFadeIn 0.8s 1.2s forwards;
-        }
+    .card-container {
+        animation: ContentFadeIn 0.8s 1.2s forwards;
     }
 }
 

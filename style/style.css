@@ -294,56 +294,56 @@ a:hover::after,
 
 @-webkit-keyframes slide-top {
   0% {
-    -webkit-transform: TranslateY(200%);
-            transform: TranslateY(200%);
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: TranslateY(0);
-            transform: TranslateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes slide-top {
   0% {
-    -webkit-transform: TranslateY(200%);
-            transform: TranslateY(200%);
+    -webkit-transform: translateY(200%);
+            transform: translateY(200%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: TranslateY(0);
-            transform: TranslateY(0);
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
     opacity: 1;
   }
 }
 
-.hero-section .title {
+.hero-section.observed .title {
   -webkit-animation: slide-top 1s ease-in-out;
           animation: slide-top 1s ease-in-out;
 }
 
-.hero-section .sub-title {
+.hero-section.observed .sub-title {
   -webkit-animation: slide-top 1s ease-in-out;
           animation: slide-top 1s ease-in-out;
 }
 
-.hero-section .objective {
+.hero-section.observed .objective {
   -webkit-animation: slide-top 1s ease-in-out;
           animation: slide-top 1s ease-in-out;
 }
 
-.works .card {
+.card.observed {
   -webkit-animation: cards-ani 1s ease-in;
           animation: cards-ani 1s ease-in;
 }
 
-.works .card img {
+.card.observed img {
   -webkit-animation: ImageFadeIn 0.8s 1.2s forwards;
           animation: ImageFadeIn 0.8s 1.2s forwards;
 }
 
-.works .card .card-container {
+.card.observed .card-container {
   -webkit-animation: ContentFadeIn 0.8s 1.2s forwards;
           animation: ContentFadeIn 0.8s 1.2s forwards;
 }
@@ -462,47 +462,47 @@ a:hover::after,
 
 @-webkit-keyframes rotate-icons {
   0% {
-    -webkit-transform: Rotate(360deg);
-            transform: Rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   25% {
-    -webkit-transform: Rotate(270deg) Scale(0.8);
-            transform: Rotate(270deg) Scale(0.8);
+    -webkit-transform: rotate(270deg) scale(0.8);
+            transform: rotate(270deg) scale(0.8);
   }
   50% {
-    -webkit-transform: Rotate(180deg) Scale(1.2);
-            transform: Rotate(180deg) Scale(1.2);
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
   }
   75% {
-    -webkit-transform: Rotate(90deg) Scale(0.8);
-            transform: Rotate(90deg) Scale(0.8);
+    -webkit-transform: rotate(90deg) scale(0.8);
+            transform: rotate(90deg) scale(0.8);
   }
   100% {
-    -webkit-transform: Rotate(0deg);
-            transform: Rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 
 @keyframes rotate-icons {
   0% {
-    -webkit-transform: Rotate(360deg);
-            transform: Rotate(360deg);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
   }
   25% {
-    -webkit-transform: Rotate(270deg) Scale(0.8);
-            transform: Rotate(270deg) Scale(0.8);
+    -webkit-transform: rotate(270deg) scale(0.8);
+            transform: rotate(270deg) scale(0.8);
   }
   50% {
-    -webkit-transform: Rotate(180deg) Scale(1.2);
-            transform: Rotate(180deg) Scale(1.2);
+    -webkit-transform: rotate(180deg) scale(1.2);
+            transform: rotate(180deg) scale(1.2);
   }
   75% {
-    -webkit-transform: Rotate(90deg) Scale(0.8);
-            transform: Rotate(90deg) Scale(0.8);
+    -webkit-transform: rotate(90deg) scale(0.8);
+            transform: rotate(90deg) scale(0.8);
   }
   100% {
-    -webkit-transform: Rotate(0deg);
-            transform: Rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 

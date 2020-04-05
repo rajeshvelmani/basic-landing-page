@@ -1,18 +1,18 @@
 @keyframes rotate-icons {
     0% {
-        transform: Rotate(360deg);
+        transform: rotate(360deg);
     }
     25% {
-        transform: Rotate(270deg) Scale(0.8);
+        transform: rotate(270deg) scale(0.8);
     }
     50% {
-        transform: Rotate(180deg) Scale(1.2);
+        transform: rotate(180deg) scale(1.2);
     }
     75% {
-        transform: Rotate(90deg) Scale(0.8);
+        transform: rotate(90deg) scale(0.8);
     }
     100% {
-        transform: Rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
