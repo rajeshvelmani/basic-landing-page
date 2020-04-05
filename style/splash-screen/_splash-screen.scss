@@ -57,8 +57,12 @@ body {
             height: 0vh;
             opacity: 0;
 
+            .splash-ani {
+                opacity: 0;
+            }
+
             .splash-title {
-                display: none;
+                opacity: 0;
             }
         }
     }
