@@ -351,14 +351,14 @@ section.works .grid {
           justify-content: center;
   -ms-flex-flow: wrap;
       flex-flow: wrap;
-  -webkit-box-flex: 302px;
-      -ms-flex: 302px;
-          flex: 302px;
+  -webkit-box-flex: 300px;
+      -ms-flex: 300px;
+          flex: 300px;
 }
 
 section.works .grid .card {
   height: 450px;
-  width: 302px;
+  width: 300px;
   border-radius: 5px;
 }
 

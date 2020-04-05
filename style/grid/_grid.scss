@@ -1,10 +1,10 @@
 @mixin grid-layout {
     @include flex-center;
     flex-flow: wrap;
-    flex: 302px;
+    flex: 300px;
     .card {
         height: 450px;
-        width: 302px;
+        width: 300px;
         // border: solid colors("hover") 1px;
         border-radius: 5px;
     }
